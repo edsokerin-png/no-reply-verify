@@ -1,67 +1,60 @@
-/* ---------- СВЕТЛАЯ ТЕМА (по умолчанию) ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 :root {
   --bg: #ffffff;
   --text: #202124;
   --text-muted: #5f6368;
   --border: #dadce0;
-  --input-bg: transparent;
-  --label-bg: #ffffff;
   --accent: #1a73e8;
   --accent-text: #ffffff;
   --accent-hover: #1765cc;
-  --avatar-bg: #5f6368;
   --link: #1a73e8;
+  --placeholder: #5f6368;
   --footer-text: #5f6368;
 }
 
-/* ---------- ТЁМНАЯ ТЕМА (автоматически) ---------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121212;
+    --bg: #202124;
     --text: #e8eaed;
     --text-muted: #9aa0a6;
     --border: #5f6368;
-    --label-bg: #121212;
     --accent: #8ab4f8;
     --accent-text: #202124;
     --accent-hover: #aecbfa;
     --link: #8ab4f8;
+    --placeholder: #9aa0a6;
     --footer-text: #9aa0a6;
   }
 }
 
-/* ---------- РУЧНОЕ ПЕРЕОПРЕДЕЛЕНИЕ ---------- */
 html[data-theme="light"] {
   --bg: #ffffff;
   --text: #202124;
   --text-muted: #5f6368;
   --border: #dadce0;
-  --label-bg: #ffffff;
   --accent: #1a73e8;
   --accent-text: #ffffff;
   --accent-hover: #1765cc;
   --link: #1a73e8;
+  --placeholder: #5f6368;
   --footer-text: #5f6368;
 }
 
 html[data-theme="dark"] {
-  --bg: #121212;
+  --bg: #202124;
   --text: #e8eaed;
   --text-muted: #9aa0a6;
   --border: #5f6368;
-  --label-bg: #121212;
   --accent: #8ab4f8;
   --accent-text: #202124;
   --accent-hover: #aecbfa;
   --link: #8ab4f8;
+  --placeholder: #9aa0a6;
   --footer-text: #9aa0a6;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -71,20 +64,18 @@ body {
   padding: 0 24px;
   display: flex;
   flex-direction: column;
-  transition: background 0.2s, color 0.2s;
 }
 
-/* Основной контент — толкаем вниз, но не вплотную */
 .main {
-  margin-top: auto;
-  padding-bottom: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  margin: 0 0 16px;
   display: block;
+  margin-bottom: 24px;
 }
 
 h1 {
@@ -100,34 +91,27 @@ p.sub {
   margin-bottom: 32px;
 }
 
-.field {
-  position: relative;
-  margin-bottom: 8px;
-}
-
-.field input {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 16px 15px;
   font-size: 16px;
-  background: var(--input-bg);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 4px;
   color: var(--text);
   outline: none;
+  margin-bottom: 16px;
 }
 
-.field input:focus {
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--placeholder);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
   border: 2px solid var(--accent);
-}
-
-.field label {
-  position: absolute;
-  top: -9px;
-  left: 12px;
-  background: var(--label-bg);
-  padding: 0 4px;
-  font-size: 12px;
-  color: var(--accent);
 }
 
 .link {
@@ -136,7 +120,7 @@ p.sub {
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  margin: 16px 0 24px;
+  margin-bottom: 24px;
 }
 
 .hint {
@@ -146,19 +130,16 @@ p.sub {
   margin-bottom: 32px;
 }
 
-.hint a {
-  color: var(--link);
-  text-decoration: none;
-}
+.hint a { color: var(--link); text-decoration: none; }
 
 .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
 }
 
-.create {
+.create,
+.forgot {
   color: var(--link);
   font-size: 14px;
   font-weight: 500;
@@ -176,9 +157,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: var(--accent-hover);
-}
+button:hover { background: var(--accent-hover); }
 
 .account {
   display: inline-flex;
@@ -186,7 +165,7 @@ button:hover {
   gap: 8px;
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 6px 14px 6px 6px;
+  padding: 4px 12px 4px 4px;
   font-size: 14px;
   color: var(--text);
   margin-bottom: 32px;
@@ -196,7 +175,7 @@ button:hover {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--avatar-bg);
+  background: #5f6368;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,10 +183,7 @@ button:hover {
   color: #fff;
 }
 
-.account .arrow {
-  color: var(--text-muted);
-  font-size: 10px;
-}
+.account .arrow { color: var(--text-muted); font-size: 10px; }
 
 .checkbox {
   display: flex;
@@ -218,48 +194,31 @@ button:hover {
   margin-bottom: 32px;
 }
 
-.checkbox input {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--accent);
-}
+.checkbox input { width: 18px; height: 18px; accent-color: var(--accent); }
 
-.forgot {
-  color: var(--link);
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-/* ---------- ФУТЕР ---------- */
 .footer {
   margin-top: auto;
-  padding: 24px 0 16px;
+  padding: 16px 0 24px;
   font-size: 12px;
   color: var(--footer-text);
-  border-top: 1px solid var(--border);
 }
 
 .footer-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
   flex-wrap: wrap;
-}
-
-.footer-row + .footer-row {
-  margin-top: 12px;
+  gap: 8px;
 }
 
 .footer-left {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
 }
 
 .footer-right {
-  display: flex;
+  display: inline-flex;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -269,11 +228,6 @@ button:hover {
   text-decoration: none;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-}
+.footer a:hover { text-decoration: underline; }
 
-.lang-arrow {
-  font-size: 10px;
-  margin-left: 2px;
-}
+.lang-arrow { font-size: 10px; }
