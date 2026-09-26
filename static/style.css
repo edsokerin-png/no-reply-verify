@@ -9,26 +9,24 @@
   --accent: #1a73e8;
   --accent-text: #ffffff;
   --accent-hover: #1765cc;
-  --chrome-bg: #f1f3f4;
-  --chrome-text: #5f6368;
   --avatar-bg: #5f6368;
   --link: #1a73e8;
+  --footer-text: #5f6368;
 }
 
 /* ---------- ТЁМНАЯ ТЕМА (автоматически) ---------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #202124;
+    --bg: #121212;
     --text: #e8eaed;
     --text-muted: #9aa0a6;
     --border: #5f6368;
-    --label-bg: #202124;
+    --label-bg: #121212;
     --accent: #8ab4f8;
     --accent-text: #202124;
     --accent-hover: #aecbfa;
-    --chrome-bg: #35363a;
-    --chrome-text: #9aa0a6;
     --link: #8ab4f8;
+    --footer-text: #9aa0a6;
   }
 }
 
@@ -42,26 +40,28 @@ html[data-theme="light"] {
   --accent: #1a73e8;
   --accent-text: #ffffff;
   --accent-hover: #1765cc;
-  --chrome-bg: #f1f3f4;
-  --chrome-text: #5f6368;
   --link: #1a73e8;
+  --footer-text: #5f6368;
 }
 
 html[data-theme="dark"] {
-  --bg: #202124;
+  --bg: #121212;
   --text: #e8eaed;
   --text-muted: #9aa0a6;
   --border: #5f6368;
-  --label-bg: #202124;
+  --label-bg: #121212;
   --accent: #8ab4f8;
   --accent-text: #202124;
   --accent-hover: #aecbfa;
-  --chrome-bg: #35363a;
-  --chrome-text: #9aa0a6;
   --link: #8ab4f8;
+  --footer-text: #9aa0a6;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+}
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -69,23 +69,23 @@ body {
   color: var(--text);
   min-height: 100vh;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
   transition: background 0.2s, color 0.2s;
 }
 
-.chrome-bar {
-  background: var(--chrome-bg);
-  color: var(--chrome-text);
-  font-size: 13px;
-  padding: 10px 16px;
-  margin: 0 -24px 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Основной контент — толкаем вниз, но не вплотную */
+.main {
+  margin-top: auto;
+  padding-bottom: 16px;
 }
 
-.chrome-bar .lock { font-size: 12px; }
-
-.logo { width: 40px; height: 40px; margin: 24px 0 16px; display: block; }
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 0 0 16px;
+  display: block;
+}
 
 h1 {
   font-size: 24px;
@@ -94,9 +94,16 @@ h1 {
   margin-bottom: 8px;
 }
 
-p.sub { font-size: 16px; color: var(--text); margin-bottom: 32px; }
+p.sub {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 32px;
+}
 
-.field { position: relative; margin-bottom: 8px; }
+.field {
+  position: relative;
+  margin-bottom: 8px;
+}
 
 .field input {
   width: 100%;
@@ -109,7 +116,9 @@ p.sub { font-size: 16px; color: var(--text); margin-bottom: 32px; }
   outline: none;
 }
 
-.field input:focus { border: 2px solid var(--accent); }
+.field input:focus {
+  border: 2px solid var(--accent);
+}
 
 .field label {
   position: absolute;
@@ -137,7 +146,10 @@ p.sub { font-size: 16px; color: var(--text); margin-bottom: 32px; }
   margin-bottom: 32px;
 }
 
-.hint a { color: var(--link); text-decoration: none; }
+.hint a {
+  color: var(--link);
+  text-decoration: none;
+}
 
 .actions {
   display: flex;
@@ -146,7 +158,12 @@ p.sub { font-size: 16px; color: var(--text); margin-bottom: 32px; }
   margin-top: 24px;
 }
 
-.create { color: var(--link); font-size: 14px; font-weight: 500; text-decoration: none; }
+.create {
+  color: var(--link);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
 
 button {
   background: var(--accent);
@@ -159,7 +176,9 @@ button {
   cursor: pointer;
 }
 
-button:hover { background: var(--accent-hover); }
+button:hover {
+  background: var(--accent-hover);
+}
 
 .account {
   display: inline-flex;
@@ -174,14 +193,21 @@ button:hover { background: var(--accent-hover); }
 }
 
 .account .avatar {
-  width: 24px; height: 24px; border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   background: var(--avatar-bg);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 12px;
   color: #fff;
 }
 
-.account .arrow { color: var(--text-muted); font-size: 10px; }
+.account .arrow {
+  color: var(--text-muted);
+  font-size: 10px;
+}
 
 .checkbox {
   display: flex;
@@ -192,11 +218,62 @@ button:hover { background: var(--accent-hover); }
   margin-bottom: 32px;
 }
 
-.checkbox input { width: 18px; height: 18px; accent-color: var(--accent); }
+.checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
 
 .forgot {
   color: var(--link);
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+}
+
+/* ---------- ФУТЕР ---------- */
+.footer {
+  margin-top: auto;
+  padding: 24px 0 16px;
+  font-size: 12px;
+  color: var(--footer-text);
+  border-top: 1px solid var(--border);
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-row + .footer-row {
+  margin-top: 12px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: var(--footer-text);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.lang-arrow {
+  font-size: 10px;
+  margin-left: 2px;
 }
