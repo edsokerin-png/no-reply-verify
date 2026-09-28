@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #202124;
+    --bg: #0d0d0d;
     --text: #e8eaed;
     --text-muted: #9aa0a6;
     --border: #5f6368;
@@ -42,7 +42,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-  --bg: #202124;
+  --bg: #0d0d0d;
   --text: #e8eaed;
   --text-muted: #9aa0a6;
   --border: #5f6368;
@@ -67,7 +67,7 @@ body {
 }
 
 .main {
-  padding-top: 24px;
+  padding-top: 40px;
   padding-bottom: 24px;
 }
 
@@ -75,7 +75,7 @@ body {
   width: 40px;
   height: 40px;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 h1 {
@@ -91,8 +91,39 @@ p.sub {
   margin-bottom: 32px;
 }
 
-input[type="text"],
-input[type="password"] {
+/* --- Поля ввода --- */
+.field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.field input {
+  width: 100%;
+  padding: 16px 15px;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  outline: none;
+}
+
+.field input:focus {
+  border: 2px solid var(--accent);
+}
+
+.field label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: var(--bg);
+  padding: 0 4px;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+/* Обычный input без label (для email-страницы) */
+input[type="text"] {
   width: 100%;
   padding: 16px 15px;
   font-size: 16px;
@@ -104,13 +135,11 @@ input[type="password"] {
   margin-bottom: 16px;
 }
 
-input[type="text"]::placeholder,
-input[type="password"]::placeholder {
+input[type="text"]::placeholder {
   color: var(--placeholder);
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="text"]:focus {
   border: 2px solid var(--accent);
 }
 
@@ -159,6 +188,7 @@ button {
 
 button:hover { background: var(--accent-hover); }
 
+/* --- Плашка аккаунта --- */
 .account {
   display: inline-flex;
   align-items: center;
@@ -168,34 +198,42 @@ button:hover { background: var(--accent-hover); }
   padding: 4px 12px 4px 4px;
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  background: transparent;
 }
 
 .account .avatar {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #5f6368;
+  background: transparent;
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: #fff;
+  color: var(--text-muted);
 }
 
 .account .arrow { color: var(--text-muted); font-size: 10px; }
 
+/* --- Чекбокс --- */
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
-.checkbox input { width: 18px; height: 18px; accent-color: var(--accent); }
+.checkbox input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
 
+/* --- Футер --- */
 .footer {
   margin-top: auto;
   padding: 16px 0 24px;
