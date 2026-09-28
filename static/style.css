@@ -82,7 +82,7 @@ h1 {
   font-size: 32px;
   font-weight: 400;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 p.sub {
