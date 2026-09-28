@@ -130,7 +130,7 @@ input[type="text"] {
   border-radius: 4px;
   color: var(--text);
   outline: none;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 input[type="text"]::placeholder {
