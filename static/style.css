@@ -67,7 +67,7 @@ body {
 }
 
 .main {
-  padding-top: 64px;
+  padding-top: 24px;
   padding-bottom: 24px;
 }
 
@@ -246,7 +246,8 @@ button:hover { background: var(--accent-hover); }
 .footer-left {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
+  width: fit-content;
 }
 
 .footer-right {
@@ -269,16 +270,15 @@ button:hover { background: var(--accent-hover); }
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 12px;
-  padding: 2px 18px 2px 4px;
+  padding: 2px 16px 2px 0;
   cursor: pointer;
   outline: none;
-  width: auto;
-  max-width: fit-content;
+  width: 78px;
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4l3 3 3-3z' fill='%239aa0a6'/></svg>");
   background-repeat: no-repeat;
-  background-position: right 2px center;
+  background-position: right 0 center;
   background-size: 10px 10px;
 }
 
