@@ -67,15 +67,15 @@ body {
 }
 
 .main {
-  padding-top: 32px;
-  padding-bottom: 16px;
+  padding-top: 64px;
+  padding-bottom: 24px;
 }
 
 .logo {
   width: 40px;
   height: 40px;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 h1 {
@@ -88,17 +88,17 @@ h1 {
 p.sub {
   font-size: 16px;
   color: var(--text);
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .field {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .field input {
   width: 100%;
-  padding: 14px 15px;
+  padding: 16px 15px;
   font-size: 16px;
   background: transparent;
   border: 1px solid var(--border);
@@ -123,14 +123,14 @@ p.sub {
 
 input[type="text"] {
   width: 100%;
-  padding: 14px 15px;
+  padding: 16px 15px;
   font-size: 16px;
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 4px;
   color: var(--text);
   outline: none;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 input[type="text"]::placeholder {
@@ -147,14 +147,14 @@ input[type="text"]:focus {
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .hint {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .hint a { color: var(--link); text-decoration: none; }
@@ -195,7 +195,7 @@ button:hover { background: var(--accent-hover); }
   padding: 4px 12px 4px 4px;
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   background: transparent;
 }
 
@@ -220,7 +220,7 @@ button:hover { background: var(--accent-hover); }
   gap: 12px;
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .checkbox input {
@@ -229,10 +229,10 @@ button:hover { background: var(--accent-hover); }
   accent-color: var(--accent);
 }
 
-/* --- Футер: вертикальный, прижат к низу --- */
+/* --- Футер --- */
 .footer {
   margin-top: auto;
-  padding: 16px 0 20px;
+  padding: 16px 0 24px;
   font-size: 12px;
   color: var(--footer-text);
 }
@@ -246,7 +246,7 @@ button:hover { background: var(--accent-hover); }
 .footer-left {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .footer-right {
@@ -269,15 +269,17 @@ button:hover { background: var(--accent-hover); }
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 12px;
-  padding: 2px 4px;
+  padding: 2px 18px 2px 4px;
   cursor: pointer;
   outline: none;
+  width: auto;
+  max-width: fit-content;
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4l3 3 3-3z' fill='%239aa0a6'/></svg>");
   background-repeat: no-repeat;
-  background-position: right 0 center;
-  padding-right: 14px;
+  background-position: right 2px center;
+  background-size: 10px 10px;
 }
 
 .lang-select option {
