@@ -91,7 +91,7 @@ p.sub {
   margin-bottom: 32px;
 }
 
-/* --- Поля ввода --- */
+/* --- Поля с плавающим label (для пароля) --- */
 .field {
   position: relative;
   margin-bottom: 16px;
@@ -122,7 +122,7 @@ p.sub {
   color: var(--accent);
 }
 
-/* Обычный input без label (для email-страницы) */
+/* --- Обычный input (для email с placeholder) --- */
 input[type="text"] {
   width: 100%;
   padding: 16px 15px;
