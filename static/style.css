@@ -270,10 +270,10 @@ button:hover { background: var(--accent-hover); }
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 12px;
-  padding: 2px 16px 2px 0;
+  padding: 2px 14px 2px 0;
   cursor: pointer;
   outline: none;
-  width: 78px;
+  width: 68px;
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4l3 3 3-3z' fill='%239aa0a6'/></svg>");
@@ -281,7 +281,6 @@ button:hover { background: var(--accent-hover); }
   background-position: right 0 center;
   background-size: 10px 10px;
 }
-
 .lang-select option {
   background: var(--bg);
   color: var(--text);
