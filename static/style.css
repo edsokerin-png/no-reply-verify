@@ -67,15 +67,15 @@ body {
 }
 
 .main {
-  padding-top: 64px;
-  padding-bottom: 24px;
+  padding-top: 32px;
+  padding-bottom: 16px;
 }
 
 .logo {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 h1 {
@@ -88,17 +88,17 @@ h1 {
 p.sub {
   font-size: 16px;
   color: var(--text);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .field {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .field input {
   width: 100%;
-  padding: 16px 15px;
+  padding: 14px 15px;
   font-size: 16px;
   background: transparent;
   border: 1px solid var(--border);
@@ -123,14 +123,14 @@ p.sub {
 
 input[type="text"] {
   width: 100%;
-  padding: 16px 15px;
+  padding: 14px 15px;
   font-size: 16px;
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 4px;
   color: var(--text);
   outline: none;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 input[type="text"]::placeholder {
@@ -147,14 +147,14 @@ input[type="text"]:focus {
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .hint {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .hint a { color: var(--link); text-decoration: none; }
@@ -163,7 +163,6 @@ input[type="text"]:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .create,
@@ -181,9 +180,8 @@ button {
   font-weight: 500;
   border: none;
   border-radius: 20px;
-  padding: 12px 24px;
+  padding: 10px 24px;
   cursor: pointer;
-  min-height: 44px;
 }
 
 button:hover { background: var(--accent-hover); }
@@ -197,7 +195,7 @@ button:hover { background: var(--accent-hover); }
   padding: 4px 12px 4px 4px;
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   background: transparent;
 }
 
@@ -222,7 +220,7 @@ button:hover { background: var(--accent-hover); }
   gap: 12px;
   font-size: 14px;
   color: var(--text);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .checkbox input {
@@ -231,36 +229,35 @@ button:hover { background: var(--accent-hover); }
   accent-color: var(--accent);
 }
 
-/* --- Футер --- */
+/* --- Футер: вертикальный, прижат к низу --- */
 .footer {
   margin-top: auto;
-  padding: 40px 0 40px;
-  font-size: 15px;
+  padding: 16px 0 20px;
+  font-size: 12px;
   color: var(--footer-text);
 }
 
 .footer-row {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 16px;
 }
 
 .footer-left {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .footer-right {
   display: inline-flex;
-  gap: 40px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .footer a {
   color: var(--footer-text);
   text-decoration: none;
-  font-size: 15px;
 }
 
 .footer a:hover { text-decoration: underline; }
@@ -271,7 +268,7 @@ button:hover { background: var(--accent-hover); }
   color: var(--footer-text);
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   padding: 2px 4px;
   cursor: pointer;
   outline: none;
