@@ -147,22 +147,15 @@ input[type="text"]:focus {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .hint {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
-  margin-bottom: 40px;
-}
-
-.hint a { color: var(--link); text-decoration: none; }
-.hint a {
-  color: var(--link);
-  text-decoration: none;
-  font-size: 14px;      /* ← размер ссылки */
-  font-weight: 600;     /* ← жирность ссылки */
+  margin-top: 120px;
+  margin-bottom: 16px;
 }
 
 .actions {
@@ -287,9 +280,8 @@ button:hover { background: var(--accent-hover); }
   background-position: right 0 center;
   background-size: 10px 10px;
 }
+
 .lang-select option {
   background: var(--bg);
   color: var(--text);
 }
-
-Вот код там где мои изменения теперь добавь свои извинения 
