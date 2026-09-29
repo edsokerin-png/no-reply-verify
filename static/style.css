@@ -278,7 +278,7 @@ button:hover { background: var(--accent-hover); }
   color: var(--footer-text);
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   padding: 2px 14px 2px 0;
   cursor: pointer;
   outline: none;
