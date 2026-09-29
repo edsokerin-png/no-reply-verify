@@ -243,7 +243,7 @@ button:hover { background: var(--accent-hover); }
   margin-top: auto;
   padding: 16px 0 24px;
   font-size: 12px;
-  color: var(--footer-text);
+  color: #c5c7c6;
 }
 
 .footer-row {
@@ -266,7 +266,7 @@ button:hover { background: var(--accent-hover); }
 }
 
 .footer a {
-  color: var(--footer-text);
+  color: #c5c7c6;
   text-decoration: none;
 }
 
@@ -275,7 +275,7 @@ button:hover { background: var(--accent-hover); }
 /* --- Выпадающий список языков --- */
 .lang-select {
   background: transparent;
-  color: var(--footer-text);
+  color: #c5c7c6;
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 12px;
@@ -285,7 +285,7 @@ button:hover { background: var(--accent-hover); }
   width: 68px;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4l3 3 3-3z' fill='%239aa0a6'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4l3 3 3-3z' fill='%23c5c7c6'/></svg>");
   background-repeat: no-repeat;
   background-position: right 0 center;
   background-size: 10px 10px;
