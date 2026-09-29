@@ -128,7 +128,7 @@ input[type="text"] {
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 4px;
-  color: #c5c7c6
+  color: #a8c8fb;
   outline: none;
   margin-bottom: 10px;
 }
