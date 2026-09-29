@@ -152,7 +152,8 @@ input[type="text"]:focus {
 
 .hint {
   font-size: 14px;
-  color: var(--text-muted);
+  color: #949494;
+  font-weight: 600;
   line-height: 1.5;
   margin-top: 25px;
   margin-bottom: 16px;
