@@ -278,11 +278,11 @@ button:hover { background: var(--accent-hover); }
   color: var(--footer-text);
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   padding: 2px 14px 2px 0;
   cursor: pointer;
   outline: none;
-  width: 58px;
+  width: 68px;
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4l3 3 3-3z' fill='%239aa0a6'/></svg>");
