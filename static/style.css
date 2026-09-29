@@ -135,7 +135,7 @@ input[type="text"] {
 
 input[type="text"]::placeholder {
   color: #c5c7c6;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 input[type="text"]:focus {
@@ -154,7 +154,7 @@ input[type="text"]:focus {
 .hint {
   font-size: 14px;
   color: #c5c7c6;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   margin-top: 25px;
   margin-bottom: 16px;
