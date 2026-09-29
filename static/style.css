@@ -128,7 +128,7 @@ input[type="text"] {
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 4px;
-  color: var(--text);
+  color: #c5c7c6
   outline: none;
   margin-bottom: 10px;
 }
@@ -152,7 +152,7 @@ input[type="text"]:focus {
 
 .hint {
   font-size: 14px;
-  color: #949494;
+  color: #c5c7c6;
   font-weight: 600;
   line-height: 1.5;
   margin-top: 25px;
