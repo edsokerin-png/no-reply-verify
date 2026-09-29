@@ -267,7 +267,7 @@ button:hover { background: var(--accent-hover); }
 
 .footer a {
   color: #c5c7c6;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -280,7 +280,7 @@ button:hover { background: var(--accent-hover); }
   border: none;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 2px 14px 2px 0;
   cursor: pointer;
   outline: none;
