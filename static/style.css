@@ -272,7 +272,3 @@ button:hover { background: var(--accent-hover); }
   background: var(--bg);
   color: var(--text);
 }
-
-.password-form {
-  margin-top: 70px;
-}
