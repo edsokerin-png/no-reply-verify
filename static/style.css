@@ -93,26 +93,6 @@ p.sub {
 
 .field {
   position: relative;
-  margin-bottom: 16px;
-}
-
-.field input {
-  width: 100%;
-  padding: 16px 15px;
-  font-size: 16px;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text);
-  outline: none;
-}
-
-.field input:focus {
-  border: 2px solid #a8c8fb;
-}
-
-.field {
-  position: relative;
   margin-bottom: 10px;
 }
 
