@@ -207,9 +207,33 @@ button:hover { background: var(--accent-hover); }
 }
 
 .checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  accent-color: var(--accent);
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.checkbox input:checked {
+  background: #a8c8fb;
+  border-color: #a8c8fb;
+}
+
+.checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #202124;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .footer {
