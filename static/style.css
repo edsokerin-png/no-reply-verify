@@ -91,7 +91,6 @@ p.sub {
   margin-bottom: 40px;
 }
 
-/* --- Поля ввода --- */
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -213,7 +212,6 @@ button:hover { background: var(--accent-hover); }
   accent-color: var(--accent);
 }
 
-/* --- Футер --- */
 .footer {
   margin-top: auto;
   padding: 16px 0 24px;
@@ -248,7 +246,6 @@ button:hover { background: var(--accent-hover); }
 
 .footer a:hover { text-decoration: underline; }
 
-/* --- Выпадающий список языков --- */
 .lang-select {
   background: transparent;
   color: #c5c7c6;
@@ -273,6 +270,7 @@ button:hover { background: var(--accent-hover); }
   color: var(--text);
 }
 
+/* --- Форма пароля: опущена вниз --- */
 .password-form {
-  margin-top: 110px;
+  margin-top: 120px;
 }
