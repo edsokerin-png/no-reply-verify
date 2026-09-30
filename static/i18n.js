@@ -181,6 +181,19 @@ var translations = {
   }
 };
 
+var displayNames = {
+  ru: 'Русский',
+  en: 'English (United States)',
+  de: 'Deutsch',
+  fr: 'Français',
+  es: 'Español',
+  it: 'Italiano',
+  pt: 'Português',
+  pl: 'Polski',
+  uk: 'Українська',
+  zh: '简体中文'
+};
+
 function applyLang(lang) {
   var dict = translations[lang] || translations.ru;
   document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -192,6 +205,12 @@ function applyLang(lang) {
     if (dict[key]) el.setAttribute('placeholder', dict[key]);
   });
   document.documentElement.setAttribute('lang', lang);
+
+  var display = document.getElementById('langDisplay');
+  if (display && displayNames[lang]) {
+    display.textContent = displayNames[lang];
+  }
+
   var sel = document.getElementById('langSelect');
   if (sel) sel.value = lang;
 }
