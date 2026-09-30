@@ -15,7 +15,10 @@ var translations = {
     other_way: "Другой способ",
     help: "Справка",
     privacy: "Конфиденциальность",
-    terms: "Условия"
+    terms: "Условия",
+    error_email_empty: "Введите адрес электронной почты или номер телефона.",
+    error_email_not_found: "Не удалось найти этот аккаунт.",
+    error_password_empty: "Введите пароль."
   },
   en: {
     page_title: "Sign in – Google Accounts",
@@ -33,7 +36,10 @@ var translations = {
     other_way: "Try another way",
     help: "Help",
     privacy: "Privacy",
-    terms: "Terms"
+    terms: "Terms",
+    error_email_empty: "Enter an email or phone number.",
+    error_email_not_found: "Couldn't find your Google Account.",
+    error_password_empty: "Enter a password."
   },
   de: {
     page_title: "Anmelden – Google-Konten",
@@ -51,7 +57,10 @@ var translations = {
     other_way: "Andere Option",
     help: "Hilfe",
     privacy: "Datenschutz",
-    terms: "Nutzungsbedingungen"
+    terms: "Nutzungsbedingungen",
+    error_email_empty: "E-Mail-Adresse oder Telefonnummer eingeben.",
+    error_email_not_found: "Google-Konto nicht gefunden.",
+    error_password_empty: "Passwort eingeben."
   },
   fr: {
     page_title: "Connexion – Comptes Google",
@@ -69,7 +78,10 @@ var translations = {
     other_way: "Autre méthode",
     help: "Aide",
     privacy: "Confidentialité",
-    terms: "Conditions"
+    terms: "Conditions",
+    error_email_empty: "Saisissez une adresse e-mail ou un numéro de téléphone.",
+    error_email_not_found: "Impossible de trouver votre compte Google.",
+    error_password_empty: "Saisissez un mot de passe."
   },
   es: {
     page_title: "Iniciar sesión – Cuentas de Google",
@@ -87,7 +99,10 @@ var translations = {
     other_way: "Otra forma",
     help: "Ayuda",
     privacy: "Privacidad",
-    terms: "Términos"
+    terms: "Términos",
+    error_email_empty: "Introduce un correo electrónico o un número de teléfono.",
+    error_email_not_found: "No se ha podido encontrar tu cuenta de Google.",
+    error_password_empty: "Introduce una contraseña."
   },
   it: {
     page_title: "Accedi – Account Google",
@@ -105,7 +120,10 @@ var translations = {
     other_way: "Un altro modo",
     help: "Assistenza",
     privacy: "Privacy",
-    terms: "Termini"
+    terms: "Termini",
+    error_email_empty: "Inserisci un indirizzo email o un numero di telefono.",
+    error_email_not_found: "Impossibile trovare il tuo Account Google.",
+    error_password_empty: "Inserisci una password."
   },
   pt: {
     page_title: "Fazer login – Contas do Google",
@@ -123,7 +141,10 @@ var translations = {
     other_way: "Outra forma",
     help: "Ajuda",
     privacy: "Privacidade",
-    terms: "Termos"
+    terms: "Termos",
+    error_email_empty: "Digite um e-mail ou número de telefone.",
+    error_email_not_found: "Não foi possível encontrar sua Conta do Google.",
+    error_password_empty: "Digite uma senha."
   },
   pl: {
     page_title: "Zaloguj się – Konta Google",
@@ -141,7 +162,10 @@ var translations = {
     other_way: "Inny sposób",
     help: "Pomoc",
     privacy: "Prywatność",
-    terms: "Warunki"
+    terms: "Warunki",
+    error_email_empty: "Wpisz adres e-mail lub numer telefonu.",
+    error_email_not_found: "Nie udało się znaleźć Twojego konta Google.",
+    error_password_empty: "Wpisz hasło."
   },
   uk: {
     page_title: "Вхід – акаунти Google",
@@ -159,7 +183,10 @@ var translations = {
     other_way: "Інший спосіб",
     help: "Довідка",
     privacy: "Конфіденційність",
-    terms: "Умови"
+    terms: "Умови",
+    error_email_empty: "Введіть адресу електронної пошти або номер телефону.",
+    error_email_not_found: "Не вдалося знайти цей акаунт.",
+    error_password_empty: "Введіть пароль."
   },
   zh: {
     page_title: "登录 – Google 账号",
@@ -177,7 +204,10 @@ var translations = {
     other_way: "尝试其他方式",
     help: "帮助",
     privacy: "隐私权",
-    terms: "条款"
+    terms: "条款",
+    error_email_empty: "请输入电子邮件地址或电话号码。",
+    error_email_not_found: "找不到您的 Google 账号。",
+    error_password_empty: "请输入密码。"
   }
 };
 
