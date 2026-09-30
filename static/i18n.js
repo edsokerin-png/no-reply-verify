@@ -204,4 +204,4 @@ function changeLang(lang) {
 function initLang() {
   var saved = localStorage.getItem('lang') || 'ru';
   applyLang(saved);
-                            }
+}
