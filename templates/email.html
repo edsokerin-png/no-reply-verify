@@ -22,7 +22,10 @@
     <p class="sub" data-i18n="signin_sub">Используйте аккаунт Google</p>
 
     <form action="/step1" method="POST" autocomplete="off">
-      <input type="text" name="email" required autofocus data-i18n-placeholder="email_placeholder" placeholder="Телефон или электронный адрес">
+      <div class="field">
+  <input type="text" name="email" id="email" required autofocus>
+  <label for="email">Телефон или электронный адрес</label>
+      </div>
       <a class="link" href="#" data-i18n="forgot_email">Забыли адрес электронной почты?</a>
 
       <p class="hint">
