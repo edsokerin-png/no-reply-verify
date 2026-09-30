@@ -91,12 +91,7 @@ p.sub {
   margin-bottom: 40px;
 }
 
-.field {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.field input {
+input[type="text"] {
   width: 100%;
   padding: 16px 15px;
   font-size: 16px;
@@ -106,31 +101,17 @@ p.sub {
   color: #ffffff;
   font-weight: 500;
   outline: none;
+  margin-bottom: 10px;
 }
 
-.field input:focus {
+input[type="text"]::placeholder {
+  color: #c5c7c6;
+  font-weight: 500;
+}
+
+input[type="text"]:focus {
   border: 2px solid #a8c8fb;
 }
-
-.field label {
-  position: absolute;
-  left: 12px;
-  top: 16px;
-  background: var(--bg);
-  padding: 0 4px;
-  font-size: 16px;
-  color: #c5c7c6;
-  pointer-events: none;
-  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-}
-
-.field input:focus + label,
-.field input:not(:placeholder-shown) + label {
-  top: -9px;
-  font-size: 12px;
-  color: #a8c8fb;
-}
-
 .link {
   display: inline-block;
   color: #a8c8fb;
