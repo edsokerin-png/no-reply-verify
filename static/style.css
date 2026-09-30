@@ -272,5 +272,5 @@ button:hover { background: var(--accent-hover); }
 
 /* --- Форма пароля: опущена вниз --- */
 .password-form {
-  margin-top: 120px;
+  margin-top: 80px;
 }
