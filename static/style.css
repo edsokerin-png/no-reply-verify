@@ -91,7 +91,9 @@ p.sub {
   margin-bottom: 40px;
 }
 
-input[type="text"] {
+/* --- Поля ввода --- */
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 16px 15px;
   font-size: 16px;
@@ -104,14 +106,17 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
   color: #c5c7c6;
   font-weight: 500;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   border: 2px solid #a8c8fb;
 }
+
 .link {
   display: inline-block;
   color: #a8c8fb;
